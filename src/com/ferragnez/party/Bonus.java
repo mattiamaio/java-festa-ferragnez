@@ -2,8 +2,8 @@ package com.ferragnez.party;
 
 import java.util.Scanner;
 
-public class CheckGuest {
-
+public class Bonus {
+	
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
@@ -14,17 +14,22 @@ public class CheckGuest {
 		System.out.print("Buonasera! E' un invitato? \nSì, sono ");
 		guest = scan.nextLine();
 		
-		for(int i = 0; i < partyGuests.length; i++){ //scorre i nomi degli invitati
-			if(guest.equals(partyGuests[i])) {   //compara i nomi tra l'input e l'array
+		int counter = 0;
+		
+		while(counter < partyGuests.length) { //finche il numero contatore resta minore della lunghezza dell'array
+			
+			if(guest.equals(partyGuests[counter])) { //compara l'input utente all'elemento dell'array alla posizione "counter"
 				System.out.println("Prego, " + guest + " entri pure e buona serata!");				
 				
 				break;
-			} else if (i == partyGuests.length-1) {		//quando arriva all'ultima posizione e non ha trovato il nome dell'invitato
+				
+			} else if (counter == partyGuests.length-1) {
 				System.out.println("Mi dispiace ma le devo chiedere di andarsene.");
 			} 
+			
+			counter++;
 		}
 		
 		scan.close();
 	}
-
-}
+}	
