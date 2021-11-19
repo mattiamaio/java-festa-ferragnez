@@ -15,7 +15,7 @@ public class CheckGuest {
 		guest = scan.nextLine();
 		
 		for(int i = 0; i < partyGuests.length; i++){ //scorre i nomi degli invitati
-			if(guest.equals(partyGuests[i])) {   //compara i nomi tra l'input e l'array
+			if(guest.equalsIgnoreCase(partyGuests[i])) {   //compara i nomi tra l'input e l'array
 				System.out.println("Prego, " + guest + " entri pure e buona serata!");				
 				
 				break;

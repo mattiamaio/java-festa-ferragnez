@@ -18,7 +18,7 @@ public class Bonus {
 		
 		while(counter < partyGuests.length) { //finche il numero contatore resta minore della lunghezza dell'array
 			
-			if(guest.equals(partyGuests[counter])) { //compara l'input utente all'elemento dell'array alla posizione "counter"
+			if(guest.equalsIgnoreCase(partyGuests[counter])) { //compara l'input utente all'elemento dell'array alla posizione "counter"
 				System.out.println("Prego, " + guest + " entri pure e buona serata!");				
 				
 				break;
